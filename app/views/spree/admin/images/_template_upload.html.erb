@@ -15,22 +15,6 @@
         </td>
     {% } %}
 
-    <td class="actions">
-
-      {% if (!o.options.autoUpload) { %}
-      <span class="start">
-        <button class="button icon-upload">{%=locale.fileupload.start%}</button>
-      </span>
-      {% } %}
-
-      {% if (!i) { %}
-      <span class="cancel">
-        <button class="button icon-ban-circle">{%=locale.fileupload.cancel%}</button>
-      </span>
-      {% } %}
-
-    </td>
-
   </tr>
   {% } %}
 </script>

@@ -1,7 +1,7 @@
 <%= render :partial => 'spree/admin/shared/product_tabs', :locals => { :current => 'Images' } %>
 <%= render :partial => 'spree/shared/error_messages', :locals => {:target => @product} %>
 
-<%= form_for @image, url: create_multiple_admin_product_images_path(@product.id), html: { multipart: true, id: "fileupload", method: :post } do |f| %>
+<%= form_for create_multiple_admin_product_images_path(@product.id), html: { multipart: true, id: "fileupload", method: :post } do |f| %>
     <div data-hook="edit_image" class="panel panel-default">
       <div class="panel-heading">
         <h1 class="panel-title">
@@ -24,14 +24,14 @@
                 </span>
                 <button type="submit" class="icon-upload button start"><%= t('multi_upload.start') %></button>
                 <button type="reset" class="icon-ban-circle button cancel"><%= t('multi_upload.cancel') %></button>
-                <div class="fileupload-progress fade">
-                  <div class="progress-extended">&nbsp;</div>
-                </div>
-                <br />
-                <table role="presentation" class="table table-striped">
-                  <tbody class="files" data-toggle="modal-gallery" data-target="#modal-gallery"></tbody>
-                </table>
               </div>
+              <div class="fileupload-progress fade">
+                <div class="progress-extended">&nbsp;</div>
+              </div>
+              <br />
+              <table role="presentation" class="table table-striped">
+                <tbody class="files" data-toggle="modal-gallery" data-target="#modal-gallery"></tbody>
+              </table>
             </div>
           </div>
         </div>
