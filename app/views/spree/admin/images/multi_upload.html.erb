@@ -19,7 +19,7 @@
                   <%= f.label :viewable_id, Spree::Variant.model_name.human %>
                   <%= f.select :viewable_id, @variants, {}, {:class => 'select2'} %>
                 </div>
-                <span class="icon-plus button fileinput-button">
+                <span class="icon-plus btn btn-primary button fileinput-button">
                   <%= t('multi_upload.add_files') %>
                   <%= f.file_field :attachment, {:multiple => true} %>
                 </span>
