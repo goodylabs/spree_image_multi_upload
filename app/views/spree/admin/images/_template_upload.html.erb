@@ -6,7 +6,7 @@
 
     {% if (file.error) { %}
         <td class="error">
-          <span class="label label-important"><%= t(:error) %></span>
+          <span class="label label-important"><%= t('multi_upload.error') %></span>
           {%=locale.fileupload.errors[file.error] || file.error%}
         </td>
     {% } else if (o.files.valid) { %}
@@ -14,6 +14,23 @@
           <span>{%=o.formatFileSize(file.size)%}</span>
         </td>
     {% } %}
+
+    <td class="actions">
+
+      {% if (!o.options.autoUpload) { %}
+      <span class="hidden start">
+        <button class="button icon-upload">{%=locale.fileupload.start%}</button>
+      </span>
+      {% } %}
+
+      {% if (!i) { %}
+      <span class="cancel">
+        <button class="btn btn-danger button icon-ban-circle"><span class="icon icon-delete"></span></button>
+      </span>
+      {% } %}
+
+
+    </td>
 
   </tr>
   {% } %}

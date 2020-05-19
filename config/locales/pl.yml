@@ -1,10 +1,10 @@
 pl:
   multi_upload:
-    title: 'Advanced Images Upload'
-    add_files: 'Dodaj pliki'
-    start: 'Zacznij upload'
-    cancel: 'Anuluj upload'
+    title: 'Dodawanie wielu zdjęć'
+    add_files: 'Wybierz pliki'
+    start: 'Zapisz zdjęcia'
     destroy: 'Usuń'
+    error: Wystąpił błąd
     errors:
       max_file_size: 'Plik jest za duży'
       min_file_size: 'File is too small'

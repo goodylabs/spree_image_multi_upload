@@ -9,7 +9,6 @@ Spree::Admin::ImagesController.class_eval do
       image.viewable_type = 'Spree::Variant' 
       image.save      
     end
-
     redirect_to admin_product_images_url(@product)
   end
 
